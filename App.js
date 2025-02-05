@@ -164,4 +164,31 @@ const styles = StyleSheet.create({
   bookmark: {
     marginLeft: 190,
   },
+  comments: {
+    display: "flex",
+    flexDirection: "row",
+    paddingLeft: 10,
+    backgroundColor: "white",
+    width: "100%",
+  },
+  commentSection: {
+    width: "100%",
+    marginTop: 5,
+    backgroundColor: "white",
+    paddingLeft: 10,
+  },
+  commentText: {
+    fontSize: 14,
+    marginVertical: 3,
+  },
+  commentUsername: {
+    fontWeight: "bold",
+  },
+  viewAllComments: {
+    color: "gray",
+    fontSize: 14,
+    marginTop: 5,
+  },
+
+
 });
