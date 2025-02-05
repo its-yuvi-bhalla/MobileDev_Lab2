@@ -33,6 +33,35 @@ export default function App() {
         source={{ uri: "https://picsum.photos/200" }}
         style={styles.post}
       />
+      <View style={styles.postActions}>
+        <TouchableOpacity>
+          <Icon name="heart" size={30} color="red" style={styles.actionIcon} />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Icon
+            name="comment-o"
+            size={30}
+            color="black"
+            style={styles.actionIcon}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Icon
+            name="paper-plane"
+            size={30}
+            color="black"
+            style={styles.actionIcon}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Icon
+            name="bookmark-o"
+            size={30}
+            color="black"
+            style={styles.bookmark}
+          />
+        </TouchableOpacity>
+      </View>
       <View style={styles.comments}>
         <Image
           source={{ uri: "https://picsum.photos/200" }}
@@ -50,7 +79,17 @@ export default function App() {
           Liked by amanlotey and 69 others
         </Text>
         <StatusBar style="auto" />
-      </View>
+      </View>
+      <View style={styles.commentSection}>
+        <Text style={styles.commentText}>
+          <Text style={styles.commentUsername}>amanlotey</Text> Looks amazing!
+          🔥
+        </Text>
+        <Text style={styles.commentText}>
+          <Text style={styles.commentUsername}>dev_guy</Text> Love this fit! 😍
+        </Text>
+        <Text style={styles.viewAllComments}>View all 12 comments</Text>
+      </View>
       <TouchableOpacity
         style={styles.alertButton}
         onPress={() => Alert.alert("Alert Button pressed")}
@@ -70,12 +109,12 @@ const styles = StyleSheet.create({
     display: "flex",
   },
   header: {
-    flexDirection: "row", 
-    alignItems: "center", 
+    flexDirection: "row",
+    alignItems: "center",
     paddingRight: 20,
     paddingTop: 5,
     paddingBottom: 10,
-    backgroundColor: "white", 
+    backgroundColor: "white",
   },
   profileImage: {
     width: 50,
@@ -102,7 +141,7 @@ const styles = StyleSheet.create({
     height: 1,
     backgroundColor: "black",
     marginTop: 10,
-  } ,
+  },
   alertButton: {
     display: "flex",
     alignItems: "center",
@@ -110,6 +149,19 @@ const styles = StyleSheet.create({
     padding: 20,
     width: "90%",
     borderRadius: 15,
-    marginTop: 20,
-  },
-})
+    marginTop: 20,
+  },
+  postActions: {
+    flexDirection: "row",
+    paddingTop: 13,
+    padding: 5,
+    backgroundColor: "white",
+    width: "100%",
+  },
+  actionIcon: {
+    marginHorizontal: 10,
+  },
+  bookmark: {
+    marginLeft: 190,
+  },
+});
