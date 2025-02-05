@@ -33,6 +33,30 @@ export default function App() {
         source={{ uri: "https://picsum.photos/200" }}
         style={styles.post}
       />
+      <View style={styles.comments}>
+        <Image
+          source={{ uri: "https://picsum.photos/200" }}
+          style={styles.commentImage}
+        ></Image>
+        <Image
+          source={{ uri: "https://picsum.photos/200" }}
+          style={styles.commentImage}
+        ></Image>
+        <Image
+          source={{ uri: "https://picsum.photos/200" }}
+          style={styles.commentImage}
+        ></Image>
+        <Text style={{ fontSize: 15, marginTop: 10, marginLeft: 10 }}>
+          Liked by amanlotey and 69 others
+        </Text>
+        <StatusBar style="auto" />
+      </View>
+      <TouchableOpacity
+        style={styles.alertButton}
+        onPress={() => Alert.alert("Alert Button pressed")}
+      >
+        <Text style={{ fontSize: 20, fontWeight: "bold" }}>Alert</Text>
+      </TouchableOpacity>
     </SafeAreaView>
   );
 }
@@ -78,5 +102,14 @@ const styles = StyleSheet.create({
     height: 1,
     backgroundColor: "black",
     marginTop: 10,
-  }
+  } ,
+  alertButton: {
+    display: "flex",
+    alignItems: "center",
+    backgroundColor: "lightblue",
+    padding: 20,
+    width: "90%",
+    borderRadius: 15,
+    marginTop: 20,
+  },
 })
