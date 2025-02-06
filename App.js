@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   Alert,
 } from "react-native";
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 export default function App() {
   return (
@@ -23,9 +24,9 @@ export default function App() {
         />
         <View style={{ flexDirection: "column" }}>
           <Text style={styles.username}>ootd_everyday</Text>
-          <Text style={{}}>via frenchie_fry39</Text>
+          <Text style={{}}>France, Paris</Text>
         </View>
-        <Text style={{ fontWeight: "bold", fontSize: 30, marginLeft: 150 }}>
+        <Text style={{ fontWeight: "bold", fontSize: 30, marginLeft: 150,  }}>
           ...
         </Text>
       </View>
@@ -75,11 +76,15 @@ export default function App() {
           source={{ uri: "https://picsum.photos/200" }}
           style={styles.commentImage}
         ></Image>
-        <Text style={{ fontSize: 15, marginTop: 10, marginLeft: 10 }}>
+        <Text style={{ fontSize: 15, marginTop: 10 }}>
           Liked by amanlotey and 69 others
         </Text>
         <StatusBar style="auto" />
       </View>
+      <View style={styles.descriptionContainer}>
+      <Text style={styles.idName}>ootd_everyday</Text>  
+      <Text style={styles.postDescription}>A day well-spent at the park! 🌿✨</Text> 
+      </View> 
       <View style={styles.commentSection}>
         <Text style={styles.commentText}>
           <Text style={styles.commentUsername}>amanlotey</Text> Looks amazing!
@@ -130,11 +135,24 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "black",
   },
+  idName: {
+    marginRight: 10,
+    marginLeft: 10,
+    fontSize: 15,
+    color: "black",
+    fontWeight: "bold",
+    display:"inline",
+  },  
   post: {
     width: "100%",
     height: "50%",
-    marginTop: 10,
     borderWidth: 1,
+  },
+  descriptionContainer: {
+    flexDirection: "row",
+    marginTop: 10,
+    width: "100%",
+    backgroundColor: "white",
   },
   divider: {
     width: "100%",
@@ -161,6 +179,10 @@ const styles = StyleSheet.create({
   actionIcon: {
     marginHorizontal: 10,
   },
+  postDescription: {
+    fontSize: 16,
+    color: "black",
+  },  
   bookmark: {
     marginLeft: 190,
   },
